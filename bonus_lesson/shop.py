@@ -9,7 +9,7 @@ import shop_clients
 logging.basicConfig(
     level=logging.DEBUG,
     format='%(asctime)s-%(levelname)s - %(message)s',
-    handlers=[logging.FileHandler("lesson_3/shop.log"), logging.StreamHandler()]
+    handlers=[logging.FileHandler("../lesson_3/shop.log"), logging.StreamHandler()]
 )
 
 
