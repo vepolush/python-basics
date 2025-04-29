@@ -96,6 +96,10 @@ from pprint import pprint
 
 # WARNING
 list_string = "123"
+for number in list_string:
+    print(number)
+    new_number = int(number) * 2
+    list_string += str(new_number)
 
 
 
