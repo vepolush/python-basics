@@ -13,6 +13,8 @@ elif math_operation == '-':
 elif math_operation == '*':
     result = first_num * second_num
     print(f"{first_num} * {second_num} = {result}")
+elif math_operation == '/' and second_num == 0:
+    print("Zero division error. We cannot divide by 0")
 elif math_operation == '/':
     result = first_num / second_num
     print(f"{first_num} / {second_num} = {result}")
