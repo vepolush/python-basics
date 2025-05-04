@@ -5,34 +5,29 @@ from keyword import kwlist as register_words
 user_string = input("Enter a string: ")
 
 capital_letters = 'ABCDEFGHIGKLMNOPQRSTUVWXYZ'
-another_check = True
-
-for register_word in register_words:
-    if len(user_string) == len(register_word) and register_word in user_string:
-        print(False)
-        another_check = False
-        break
+is_validation_needed = True
 
 for capital_letter in capital_letters:
     if capital_letter in user_string:
-        print(False)
-        another_check = False
+        is_validation_needed = False
         break
 
-for punctuation in string.punctuation:
-    if punctuation == '_':
-        continue
-    elif punctuation in user_string:
-        print(False)
-        another_check = False
-        break
+if is_validation_needed is True:
+    for punctuation in string.punctuation:
+        if punctuation == '_':
+            continue
+        elif punctuation in user_string:
+            is_validation_needed = False
+            break
 
-if another_check is True:
+if is_validation_needed is True:
     if len(user_string) > 1 and len(user_string) == user_string.count('_'):
-        print(False)
+        is_validation_needed = False
     elif user_string[0].isdigit():
-        print(False)
+        is_validation_needed = False
     elif ' ' in user_string:
-        print(False)
-    else:
-        print(True)
+        is_validation_needed = False
+    elif user_string in register_words:
+        is_validation_needed = False
+
+print(is_validation_needed)
