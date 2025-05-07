@@ -1,0 +1,33 @@
+{
+    "id": 22,
+    "name": "Олександр",
+    "hobbies": [
+        "tennis",
+        "soccer"
+    ],
+    "is_married": true,
+    "address": {
+        "city": "Odesa",
+        "street": "Derybasivska",
+        "building": 15
+    },
+    "siblings": null,
+    "money": 100,
+    "0": 555
+}{
+    "id": 22,
+    "name": "Олександр",
+    "hobbies": [
+        "tennis",
+        "soccer"
+    ],
+    "is_married": true,
+    "address": {
+        "city": "Odesa",
+        "street": "Derybasivska",
+        "building": 15
+    },
+    "siblings": null,
+    "money": 100,
+    "0": 555
+}
