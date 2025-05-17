@@ -5,7 +5,7 @@ def popular_words (text: str, words: list | set | tuple | dict) -> dict:
     words_count = dict()
     words_from_text = text.lower().split()
 
-    for word in words:
+    for word in set(words):
         words_count[word] = words_from_text.count(word)
 
     return words_count
