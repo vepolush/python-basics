@@ -1,6 +1,6 @@
 def first_word(text: str) -> str:
     """
-    Return first word of 'text'
+    Returns first word of 'text'
     """
     text_punctuation = '.,'
     text_without_punctuation = text
@@ -8,14 +8,12 @@ def first_word(text: str) -> str:
     for char in text_without_punctuation:
         if char in text_punctuation:
             text_without_punctuation = text_without_punctuation.replace(char, ' ')
-            text_without_punctuation = text_without_punctuation.replace(char, ' ')
 
     text_without_punctuation = text_without_punctuation.strip()
     words_from_text = text_without_punctuation.split()
     first_word_from_the_text = words_from_text[0]
 
     return first_word_from_the_text
-
 
 
 assert first_word("Hello world") == "Hello", 'Test1'
