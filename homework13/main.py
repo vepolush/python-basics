@@ -15,4 +15,3 @@ gr.delete_student('Taylor')
 print(gr) # Only one student
 
 print("Ok")
-
