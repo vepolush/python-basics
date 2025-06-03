@@ -1,3 +1,15 @@
+class AddStudentError(Exception):
+    """
+    Class for 'add student' exceptions description
+    """
+    def __init__(self, msg: str="You can not add more, than 10 students."):
+        self.msg = msg
+        super().__init__(self.msg)
+
+    def __str__(self):
+        return self.msg
+
+
 class Human:
     """
     Class for Human description
@@ -32,6 +44,8 @@ class Group:
     """
     Class for Group description
     """
+    student_count = 0
+
     def __init__(self, number):
         self.number = number
         self.group = set()
@@ -40,7 +54,11 @@ class Group:
         """
         Adds student to the group
         """
-        self.group.add(student)
+        if Group.student_count < 10:
+            Group.student_count += 1
+            self.group.add(student)
+        else:
+            raise AddStudentError
 
     def delete_student(self, last_name) -> None:
         """
